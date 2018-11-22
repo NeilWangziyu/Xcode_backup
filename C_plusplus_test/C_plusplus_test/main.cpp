@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <map>
+
 using namespace std;
 
 class Solution {
@@ -60,6 +61,32 @@ public:
             nums1[end--] = nums2[n--];
         }
     }
+    
+    int nthUglyNumber(int n){
+        if (n < 7)
+            return n;
+        
+//        int [] ids = new int [3];
+//        int [] uglys = new int[n];
+        int ids[3];
+        int uglys[n];
+        uglys[0] = 1;
+        ids[0] = 0;
+        ids[1] = 0;
+        ids[2] = 0;
+        for (int i=1; i<n; i++) {
+            int a = uglys[ids[0]] * 2;
+            int b = uglys[ids[1]] * 3;
+            int c = uglys[ids[2]] * 5;
+            int min_num = min(a, min(b, c));
+            if (min_num == a)   ids[0]++ ;
+            if (min_num == b)   ids[1]++;
+            if (min_num == c)    ids[2]++;
+            uglys[i] = min_num;
+        }
+        return uglys[n-1];
+    }
+    
 };
 
 
@@ -93,8 +120,13 @@ int main(int argc, const char * argv[]) {
     for (int i=0; i<nums1.size(); i++) {
         cout<<nums1[i]<<",";
     }
+    cout<<"merge finished";
     cout<<"\n";
 
+    int ugly_count = 30;
+    int ugly = S.nthUglyNumber(ugly_count);
+    cout << ugly << endl;
+    
     
     return 0;
 }
