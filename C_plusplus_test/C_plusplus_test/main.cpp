@@ -40,6 +40,7 @@ public:
                 
             }
             m[nums[i]] = i;
+            
         }
         return res;
     }
