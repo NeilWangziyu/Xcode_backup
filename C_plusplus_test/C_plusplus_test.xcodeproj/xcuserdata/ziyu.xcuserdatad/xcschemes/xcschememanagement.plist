@@ -7,7 +7,7 @@
 		<key>C_plusplus_test 2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>C_plusplus_test.xcscheme</key>
 		<dict>
@@ -37,7 +37,12 @@
 		<key>primer_Two.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
+		</dict>
+		<key>reverse.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>twoSum.xcscheme_^#shared#^_</key>
 		<dict>

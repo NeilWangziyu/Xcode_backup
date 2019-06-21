@@ -92,7 +92,7 @@ public:
         return result;
     }
     
-    vector<int> twoSum4(vector<int>& nums, int target) {
+    vector<int> twoSum5(vector<int>& nums, int target) {
         vector<int> null_;
         if(nums.size() <2 ) return null_;
         
